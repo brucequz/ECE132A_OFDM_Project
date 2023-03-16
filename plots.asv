@@ -85,11 +85,11 @@ semilogy(SNR_db-3,Pe_bit_QPSK, '-*', 'Color', 'g'); hold on;
 semilogy(SNR_db-4.77,Pe_bit_8PSK, '-^', 'Color', 'b'); hold on;
 semilogy(SNR_db-1.57,Pe_bit_mixed, '-d', 'Color', 'm'); hold on; %%%%%% !!!!!
 load mixed_reverse.mat;
-semilogy(SNR_db-1.57,Pe_bit_mixed, ':d', 'Color','m'); hold on;
+semilogy(SNR_db-1.57,Pe_bit_mixed, '--d', 'Color','m'); hold on;
 load BER_vs_EbN0_6.mat;
-semilogy(SNR_db-1.57,Pe_bit_mixed_under, '-s', 'Color', 'k'); hold on;
-semilogy(SNR_db-1.57,Pe_bit_mixed_exact, '--s', 'Color', 'k'); hold on;
-semilogy(SNR_db-1.57,Pe_bit_mixed_over, '-.s', 'Color', 'k'); hold on;
+semilogy(SNR_db-1.57,Pe_bit_mixed_under, ':s', 'Color', 'y'); hold on;
+semilogy(SNR_db-1.57,Pe_bit_mixed_exact, ':s', 'Color', 'y'); hold on;
+semilogy(SNR_db-1.57,Pe_bit_mixed_over, ':s', 'Color', 'y'); hold on;
 grid on;
 xlabel('Eb/N0 (dB)', 'FontSize',20);
 xlim([0,16]);
@@ -98,6 +98,6 @@ title('BER vs. Eb/N0', 'FontSize', 25);
 lgd = legend("Bit Error Rate - BPSK", "Bit Error Rate - QPSK",...
                 "Bit Error Rate - 8PSK", "Bit Error Rate - Mixed",...
                 "Bit Error Rate - Mixed (reverse channels)", ...
-                "Bit Error Rate - Excess CP", "Bit Error Rate - Exact CP", ...
+                "Bit Error Rate - Excess CP", "Bit Error Rate - Exact Cp", ...
                 "Bit Error Rate - ISI");  
 lgd.FontSize = 15;
