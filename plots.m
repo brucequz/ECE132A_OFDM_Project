@@ -77,6 +77,7 @@ lgd.FontSize = 15;
 
 %% Section 6
 
+close all;
 load BER_vs_EbN0_5.mat;
 f = figure;
 f.Position = [100 100 750 600];
